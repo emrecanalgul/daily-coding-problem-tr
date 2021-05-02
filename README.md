@@ -1,1 +1,85 @@
-# daily-coding-problem-tr
+# Daily Coding Problem
+	
+## :office: Company
+	
+- [Adobe](DailyCodingProblem/Adobe)  `1`
+- [Affirm](DailyCodingProblem/Affirm)  `1`
+- [Airbnb](DailyCodingProblem/Airbnb)  `9`
+- [Airtable](DailyCodingProblem/Airtable)  `1`
+- [Alibaba](DailyCodingProblem/Alibaba)  `1`
+- [Amazon](DailyCodingProblem/Amazon)  `33`
+- [Apple](DailyCodingProblem/Apple)  `13`
+- [Atlassian](DailyCodingProblem/Atlassian)  `1`
+- [Bloomberg](DailyCodingProblem/Bloomberg)  `2`
+- [BufferBox](DailyCodingProblem/BufferBox)  `1`
+- [Cisco](DailyCodingProblem/Cisco)  `1`
+- [Citrix](DailyCodingProblem/Citrix)  `1`
+- [Coinbase](DailyCodingProblem/Coinbase)  `1`
+- [ContextLogic](DailyCodingProblem/ContextLogic)  `1`
+- [Coursera](DailyCodingProblem/Coursera)  `1`
+- [Dropbox](DailyCodingProblem/Dropbox)  `12`
+- [Epic](DailyCodingProblem/Epic)  `1`
+- [Etsy](DailyCodingProblem/Etsy)  `2`
+- [Facebook](DailyCodingProblem/Facebook)  `42`
+- [Fitbit](DailyCodingProblem/Fitbit)  `1`
+- [Flexport](DailyCodingProblem/Flexport)  `1`
+- [Flipkart](DailyCodingProblem/Flipkart)  `2`
+- [Glassdoor](DailyCodingProblem/Glassdoor)  `1`
+- [Goldman Sachs](DailyCodingProblem/Goldman%20Sachs)  `2`
+- [Google](DailyCodingProblem/Google)  `88`
+- [Grammarly](DailyCodingProblem/Grammarly)  `1`
+- [Gusto](DailyCodingProblem/Gusto)  `1`
+- [IBM](DailyCodingProblem/IBM)  `2`
+- [Indeed](DailyCodingProblem/Indeed)  `1`
+- [Jane Street](DailyCodingProblem/Jane%20Street)  `6`
+- [LinkedIn](DailyCodingProblem/LinkedIn)  `8`
+- [Lyft](DailyCodingProblem/Lyft)  `1`
+- [Mailchimp](DailyCodingProblem/Mailchimp)  `1`
+- [MIT](DailyCodingProblem/MIT)  `1`
+- [Microsoft](DailyCodingProblem/Microsoft)  `29`
+- [MongoDB](DailyCodingProblem/MongoDB)  `1`
+- [Morgan Stanley](DailyCodingProblem/Morgan%20Stanley)  `1`
+- [Mozilla](DailyCodingProblem/Mozilla)  `1`
+- [Nest](DailyCodingProblem/Nest)  `1`
+- [Netflix](DailyCodingProblem/Netflix)  `4`
+- [Nextdoor](DailyCodingProblem/Nextdoor)  `1`
+- [Nvidia](DailyCodingProblem/Nvidia)  `2`
+- [Oracle](DailyCodingProblem/Oracle)  `3`
+- [Others](DailyCodingProblem/Others)  `5`
+- [PagerDuty](DailyCodingProblem/PagerDuty)  `1`
+- [Palantir](DailyCodingProblem/Palantir)  `8`
+- [Pandora](DailyCodingProblem/Pandora)  `1`
+- [Paypal](DailyCodingProblem/Paypal)  `1`
+- [PayPal](DailyCodingProblem/PayPal)  `2`
+- [Pinterest](DailyCodingProblem/Pinterest)  `3`
+- [Pivotal](DailyCodingProblem/Pivotal)  `2`
+- [Postmates](DailyCodingProblem/Postmates)  `1`
+- [Quantcast](DailyCodingProblem/Quantcast)  `1`
+- [Quora](DailyCodingProblem/Quora)  `4`
+- [Riot Games](DailyCodingProblem/Riot%20Games)  `1`
+- [Robinhood](DailyCodingProblem/Robinhood)  `1`
+- [Salesforce](DailyCodingProblem/Salesforce)  `4`
+- [Samsung](DailyCodingProblem/Samsung)  `1`
+- [Slack](DailyCodingProblem/Slack)  `2`
+- [Snapchat](DailyCodingProblem/Snapchat)  `5`
+- [Spotify](DailyCodingProblem/Spotify)  `4`
+- [Square](DailyCodingProblem/Square)  `7`
+- [Squarespace](DailyCodingProblem/Squarespace)  `1`
+- [Stitch Fix](DailyCodingProblem/Stitch%20Fix)  `1`
+- [Stripe](DailyCodingProblem/Stripe)  `6`
+- [Sumo Logic](DailyCodingProblem/Sumo%20Logic)  `1`
+- [Triplebyte](DailyCodingProblem/Triplebyte)  `2`
+- [Twitch](DailyCodingProblem/Twitch)  `1`
+- [Twitter](DailyCodingProblem/Twitter)  `12`
+- [Two Sigma](DailyCodingProblem/Two%20Sigma)  `8`
+- [Uber](DailyCodingProblem/Uber)  `10`
+- [VMware](DailyCodingProblem/VMware)  `1`
+- [Walmart Labs](DailyCodingProblem/Walmart%20Labs)  `1`
+- [Wayfair](DailyCodingProblem/Wayfair)  `1`
+- [WeWork](DailyCodingProblem/WeWork)  `1`
+- [WhatsApp](DailyCodingProblem/WhatsApp)  `1`
+- [Yahoo](DailyCodingProblem/Yahoo)  `4`
+- [Yelp](DailyCodingProblem/Yelp)  `3`
+- [Yext](DailyCodingProblem/Yext)  `1`
+- [YouTube](DailyCodingProblem/YouTube)  `1`
+- [Zillow](DailyCodingProblem/Zillow)  `3`
