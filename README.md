@@ -1,6 +1,8 @@
 # Daily Coding Problem
-	
-## :office: Company
+
+[dailycodingproblem](dailycodingproblem.com) tarafından gönderilen teknoloji firmalarına ait mülakat soruları.
+
+## :office: Firmalar
 	
 - [Adobe](DailyCodingProblem/Adobe)  `1`
 - [Affirm](DailyCodingProblem/Affirm)  `1`
