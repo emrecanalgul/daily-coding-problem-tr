@@ -1,6 +1,6 @@
 # Daily Coding Problem
 
-[dailycodingproblem](dailycodingproblem.com) tarafından gönderilen teknoloji firmalarına ait mülakat soruları.
+[dailycodingproblem](https://www.dailycodingproblem.com/) tarafından gönderilen teknoloji firmalarına ait mülakat soruları.
 
 ## :office: Firmalar
 	
