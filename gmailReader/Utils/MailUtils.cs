@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
@@ -41,14 +42,12 @@ namespace Utils
                 var folder = client.GetFolder(folderName);
                 folder.Open(FolderAccess.ReadOnly);
                 var results = folder.Search(SearchOptions.All, searchQuery);
-                int count = 0;
+
                 foreach (var uniqueId in results.UniqueIds)
                 {
                     var message = folder.GetMessage(uniqueId);
 
                     messages.Add(message.HtmlBody);
-                    if (count == 10) break;
-                    count++;
                 }
 
                 client.Disconnect(true);

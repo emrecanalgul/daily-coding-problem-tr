@@ -32,40 +32,107 @@ namespace Utils
             HtmlNodeCollection contents = bodyContent.SelectNodes("td/table/tr/td/*");
 
             List<string> p = new List<string>();
-            string company = string.Empty;
+            string company = "Others";
             foreach (var item in contents)
             {
                 if (item.Name.Contains("hr")) break;
                 if (item.InnerText.Contains("Good morning")) continue;
-                if (item.InnerText.Contains("This problem was asked by"))
+
+                string companyName = GetCompany(item.InnerText);
+                if (companyName != null)
                 {
-                    company = item.InnerText.Replace("This problem was asked by ", string.Empty).Replace(".", string.Empty);
-                    continue;
-                }
-                else if (item.InnerText.Contains("This problem was recently asked by"))
-                {
-                    company = item.InnerText.Replace("This problem was recently asked by ", string.Empty).Replace(".", string.Empty);
+                    company = companyName;
                     continue;
                 }
 
-                p.Add(item.InnerText);
+                if (item.HasChildNodes)
+                {
+                    string innerText = string.Empty;
+                    foreach (var child in item.ChildNodes)
+                    {
+                        string childInnerText = ReplaceText(child.InnerText);
+
+                        if (child.ParentNode.Name.Contains("pre")) innerText += $"```\n{childInnerText}```";
+                        else if (child.Name.Contains("code")) innerText += $"`{childInnerText}`";
+                        else if (child.Name.Contains("text")) innerText += childInnerText;
+                    }
+
+                    p.Add(innerText);
+                }
+                else
+                {
+                    p.Add(item.InnerText);
+                }
             }
 
             model.Difficulty = GetDifficulty(difficultyText);
             model.Paragraph = p;
+            model.ParagraphText = string.Join(string.Empty, p);
             model.Company = company;
             model.Html = htmlText;
             return model;
         }
 
+        private static string ReplaceText(string innerText)
+        {
+            innerText = innerText.Replace("&#39;", "'");
+            innerText = innerText.Replace("&quot;", "\"");
+            return innerText;
+        }
+
         static Difficulty GetDifficulty(string text)
         {
-            if (text.ToLower().Contains(Easy)) return Difficulty.Easy;
-            if (text.ToLower().Contains(Medium)) return Difficulty.Medium;
-            if (text.ToLower().Contains(Hard)) return Difficulty.Hard;
+            if (text.ToLower().Contains(Easy))
+            {
+
+                return new Difficulty
+                {
+                    DifficultyEnum = DifficultyEnum.Easy,
+                    BadgeUrl = "https://img.shields.io/badge/-EASY-green",
+                };
+            }
+            if (text.ToLower().Contains(Medium))
+            {
+                return new Difficulty
+                {
+                    DifficultyEnum = DifficultyEnum.Medium,
+                    BadgeUrl = "https://img.shields.io/badge/-MEDIUM-yellow",
+                };
+            }
+            if (text.ToLower().Contains(Hard))
+            {
+                return new Difficulty
+                {
+                    DifficultyEnum = DifficultyEnum.Hard,
+                    BadgeUrl = "https://img.shields.io/badge/-HARD-red",
+                };
+            }
 
             throw new Exception("Non Found Difficulty");
 
         }
+
+        static string GetCompany(string innerText)
+        {
+            if (innerText.Contains("This problem was asked by"))
+            {
+                return innerText.Replace("This problem was asked by ", string.Empty).Replace(".", string.Empty);
+            }
+            else if (innerText.Contains("This problem was recently asked by"))
+            {
+                return innerText.Replace("This problem was recently asked by ", string.Empty).Replace(".", string.Empty);
+            }
+            else if (innerText.Contains("This problem was asked "))
+            {
+                return innerText.Replace("This problem was asked ", string.Empty).Replace(".", string.Empty);
+            }
+            else if (innerText.Contains("This question was asked by "))
+            {
+                return innerText.Replace("This question was asked by ", string.Empty).Replace(".", string.Empty);
+            }
+
+            return null;
+        }
+
     }
 }

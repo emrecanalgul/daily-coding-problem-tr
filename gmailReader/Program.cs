@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using MailKit.Search;
 using Models;
 using Utils;
@@ -21,13 +23,20 @@ namespace gmailReader
             {
                 try
                 {
-                    readMailModels.Add(HtmlUtils.ReadHtmlFromText(email));
+                    ReadMailModel emailModel = HtmlUtils.ReadHtmlFromText(email);
+                    if (readMailModels.Any(x => x.ParagraphText == emailModel.ParagraphText))
+                        continue;
+
+                    readMailModels.Add(emailModel);
                 }
                 catch (System.Exception ex)
                 {
                     Console.Write(ex.Message);
                 }
             }
+
+            FileUtils.CreateCompanyReadmeFile(readMailModels);
+            FileUtils.CreateMainReadmeFile(readMailModels);
 
         }
     }
